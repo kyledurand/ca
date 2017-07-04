@@ -1,0 +1,51 @@
+.TopBar {
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+  background-color: #000000;
+
+}
+
+.TopBarItem {
+  color: #ffffff;
+  text-align: left;
+  font-size: 24px;
+  line-height: 30px;
+  font-family: inherit;
+  box-shadow: 0 0 0 0 transparent;
+  text-transform: uppercase;
+  transition: box-shadow 250ms ease-in-out;
+}
+
+.TopBarItem:focus {
+  outline: none;
+  box-shadow: 0px 10px 0px 0px white;
+}
+
+.TopBarItem:active {
+  box-shadow: 0px 10px 0px 0px white
+}
+
+.TopBarItem-fill {
+  flex: 1 1 auto;
+}
+
+.one {
+  background-color: black;
+}
+
+.two {
+  background-color: lightcoral;
+}
+
+.three {
+  background-color: lightpink;
+}
+
+.four {
+  background-color: lightcyan;
+}
+
+.five {
+  background-color: aquamarine;
+}

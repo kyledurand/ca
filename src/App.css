@@ -17,9 +17,6 @@
 }
 
 .AppFrame {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: 'Abel';
   height: 100vh;
   width: 100vw;
