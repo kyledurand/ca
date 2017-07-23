@@ -15,9 +15,3 @@
     src: url('abel-regular-webfont.svg') format('svg');
   }
 }
-
-.AppFrame {
-  font-family: 'Abel';
-  height: 100vh;
-  width: 100vw;
-}

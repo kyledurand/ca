@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from '../../utilities/class-names';
 import './TopBar.css';
 
 const Page = {
@@ -10,24 +9,26 @@ const Page = {
   5: 'five',
 }
 
-export default class App extends React.Component {
+export default class App extends React.PureComponent {
   render() {
-    const {items, page} = this.props;
+    const {items, currentPage} = this.props;
 
     return (
-      <div className={`TopBar ${Page[page]}`}>
+      <div className={`TopBar ${Page[currentPage]}`}>
         {items.map((item) => {
+          const {handleClick} = item;
+
           return (
-            <button
+            <div
               key={item.content}
-              className={classNames({
-                'TopBarItem': true,
-                'TopBarItem-fill': item.fill,
-              })}
-              onClick={item.handleClick}
-            >
-              {item.content}
-            </button>
+              className={item.fill && 'TopBarItem-fill'}>
+              <button
+                className="TopBarButton"
+                onClick={handleClick}
+              >
+                {item.content}
+              </button>
+            </div>
           )
         })}
       </div>
