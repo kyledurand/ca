@@ -2,9 +2,11 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-progressive-image-loading": "^3.0.0",
     "react-scripts": "1.0.10"
   },
   "scripts": {
