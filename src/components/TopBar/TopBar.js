@@ -1,32 +1,29 @@
 import React from 'react';
+import {classNames} from '../../utilities';
 import './TopBar.css';
-
-const Page = {
-  1: 'one',
-  2: 'two',
-  3: 'three',
-  4: 'four',
-  5: 'five',
-}
 
 export default class App extends React.PureComponent {
   render() {
-    const {items, currentPage} = this.props;
+    const {items, section} = this.props;
 
     return (
-      <div className={`TopBar ${Page[currentPage]}`}>
+      <div className={`TopBar ${section}`}>
         {items.map((item) => {
-          const {handleClick} = item;
+          const {title, fill, onClick} = item;
+          const className = classNames({
+            'TopBarButton': true,
+            'selected': section === title,
+          });
 
           return (
             <div
-              key={item.content}
-              className={item.fill && 'TopBarItem-fill'}>
+              key={title}
+              className={fill && 'TopBarItem-fill'}>
               <button
-                className="TopBarButton"
-                onClick={handleClick}
+                className={className}
+                onClick={onClick}
               >
-                {item.content}
+                {title}
               </button>
             </div>
           )

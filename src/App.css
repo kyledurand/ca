@@ -1,4 +1,4 @@
-@font-face {
+ @font-face {
   font-family: 'Abel';
   src: url('abel-regular-webfont.eot');
   src: url('abel-regular-webfont.eot?#iefix') format('eot'),
@@ -14,4 +14,20 @@
     font-family: 'Abel';
     src: url('abel-regular-webfont.svg') format('svg');
   }
+}
+
+html {
+  font-size: 62.5%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 400;
+  text-transform: initial;
+  letter-spacing: initial;
+  color: #212b35;
+  font-family: -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
 }
