@@ -71,7 +71,7 @@ export default class App extends Component {
 
   render() {
     const {currentPage, name, section} = this.state;
-    console.log(currentPage);
+
     return (
       <Frame>
         <TopBar
