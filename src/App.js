@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Frame, TopBar, Content} from './components';
 import {Pages} from './components/Content/pages.js';
-import './App.css';
+import './App.scss';
 
 const totalPages = Pages.length;
 

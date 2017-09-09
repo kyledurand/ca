@@ -1,19 +1,11 @@
  @font-face {
   font-family: 'Abel';
-  src: url('abel-regular-webfont.eot');
-  src: url('abel-regular-webfont.eot?#iefix') format('eot'),
-  url('abel-regular-webfont.woff') format('woff'),
-  url('abel-regular-webfont.ttf') format('truetype'),
-  url('abel-regular-webfont.svg') format('svg');
+  src: url('./abel-regular-webfont.eot');
+  src: url('./abel-regular-webfont.eot?#iefix') format('eot'),
+  url('./abel-regular-webfont.woff') format('woff'),
+  url('./abel-regular-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'Abel';
-    src: url('abel-regular-webfont.svg') format('svg');
-  }
 }
 
 html {

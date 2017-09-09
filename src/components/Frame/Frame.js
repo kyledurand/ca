@@ -1,9 +1,9 @@
 import React from 'react';
-import './Frame.css';
+import * as styles from  './Frame.scss';
 
 export default function App({children}) {
   return (
-    <div className="AppFrame">
+    <div className={styles.AppFrame}>
       {children}
     </div>
   );

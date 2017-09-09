@@ -1,24 +1,25 @@
 import React from 'react';
-import {classNames} from '../../utilities';
-import './TopBar.css';
+import classNames from 'classnames';
+import * as styles from './TopBar.scss';
 
 export default class App extends React.PureComponent {
   render() {
     const {items, section} = this.props;
 
     return (
-      <div className={`TopBar ${section}`}>
+      <div className={classNames(styles.TopBar, styles[`${section}`])}>
         {items.map((item) => {
           const {title, fill, onClick} = item;
-          const className = classNames({
-            'TopBarButton': true,
-            'selected': section === title,
-          });
+          const className = classNames(
+            styles.TopBarButton,
+            section === title && styles.selected,
+          );
 
           return (
             <div
               key={title}
-              className={fill && 'TopBarItem-fill'}>
+              className={fill && styles['TopBarItem-fill']}
+            >
               <button
                 className={className}
                 onClick={onClick}
@@ -32,4 +33,3 @@ export default class App extends React.PureComponent {
     );
   }
 }
-

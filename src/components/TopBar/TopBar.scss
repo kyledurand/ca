@@ -17,13 +17,15 @@
     box-shadow 250ms ease-in-out;
 }
 
-.TopBarButton.selected {
-  outline: none;
-  box-shadow: 0px 10px 0px 0px currentColor;
-}
+.TopBarButton {
+  &.selected {
+    outline: none;
+    box-shadow: 0px 10px 0px 0px currentColor;
+  }
 
-.TopBarButton:focus {
-  outline: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 .TopBarItem-fill {

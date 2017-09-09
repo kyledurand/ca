@@ -2,7 +2,7 @@ import {
   Kyle,
   Landing,
 } from '../../assets/images';
-
+console.log(Kyle, Landing);
 export const Pages = [
   {
     title: 'Kyle Durand Graphic Design',

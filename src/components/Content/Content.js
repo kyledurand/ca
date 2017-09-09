@@ -1,32 +1,32 @@
 import React from 'react';
-import {classNames} from '../../utilities';
-import './Content.css';
+import classNames from 'classnames';
+import * as styles from './Content.scss';
 
 export default function Content({intro, currentPage, pages}) {
   return (
-    <div className="Content">
+    <div className={styles.Content}>
       {pages.map((page, index) => {
         const {title, image, description, background} = page;
         const pageIndex = index + 1;
 
-        const className = classNames({
-          'Page': true,
-          'Page-Lesser': pageIndex < currentPage,
-          'Page-Greater': pageIndex > currentPage,
-        });
+        const className = classNames(
+          styles.Page,
+          pageIndex < currentPage && styles['Page-Lesser'],
+          pageIndex > currentPage && styles['Page-Greater'],
+        );
 
         const descriptionMarkup = image
           ? (
             <img
               src={image}
-              className="Intro"
+              className={styles.Intro}
               alt={title}
             />
           )
           : (
-            <div className="TextContainer">
-              <h2 className="Title">{title}</h2>
-              <p className="Description">{description}</p>
+            <div className={styles.TextContainer}>
+              <h2 className={styles.Title}>{title}</h2>
+              <p className={styles.Description}>{description}</p>
             </div>
           );
 
