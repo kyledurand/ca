@@ -1,0 +1,61 @@
+@import 'utilities';
+@import 'colors';
+
+.TopBar {
+  display: flex;
+  align-items: center;
+  min-height: rem(56px);
+  transition: background-color 250ms ease-in-out;
+}
+
+.TopBarButton {
+  color: inherit;
+  text-align: left;
+  font-size: rem(24px);
+  font-family: inherit;
+  box-shadow: 0px 0px 0px 0px transparent;
+  text-transform: uppercase;
+  transition:
+    color 100ms ease-in-out,
+    box-shadow 250ms ease-in-out;
+}
+
+.TopBarButton {
+  &.selected {
+    outline: none;
+    box-shadow: 0px rem(10px) 0px 0px currentColor;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.TopBarItem-fill {
+  flex: 1 1 auto;
+}
+
+.intro {
+  color: color(white);
+  background-color: black;
+}
+
+.work {
+  color: color(white);
+  background-color: color(coral);
+}
+
+.about {
+  color: color(white);
+  background-color: color(pink);
+}
+
+.info {
+  color: color(ink);
+  background-color: color(cyan);
+}
+
+.more {
+  color: color(ink);
+  background-color: color(aquamarine);
+}
