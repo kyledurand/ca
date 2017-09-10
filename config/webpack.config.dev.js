@@ -86,7 +86,6 @@ module.exports = {
     // for React Native Web.
     extensions: ['.web.js', '.js', '.json', '.web.jsx', '.jsx'],
     alias: {
-
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
@@ -184,7 +183,7 @@ module.exports = {
       // In production, we use a plugin to extract that CSS to a file, but
       // in development "style" loader enables hot editing of CSS.
       {
-        test: /\.scss$/,
+        test: /\.(css|scss)$/,
         use: [
           {
             loader: require.resolve('style-loader'),
@@ -195,6 +194,12 @@ module.exports = {
               importLoaders: 1,
               modules: true,
               localIdentName: "[name]__[local]___[hash:base64:5]"
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              includePaths: ['src/common']
             },
           },
           {
@@ -216,9 +221,6 @@ module.exports = {
                 }),
               ],
             },
-          },
-          {
-            loader: 'sass-loader',
           },
         ],
       },

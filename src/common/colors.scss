@@ -1,0 +1,54 @@
+@import 'utilities';
+
+$color-palette-data: (
+  white: (
+    base: #ffffff,
+  ),
+
+  black: (
+    base: #000000,
+  ),
+
+  coral: (
+    base: #f08080,
+  ),
+
+  pink: (
+    base: #ffb6c1,
+  ),
+
+  cyan: (
+    base: #e0ffff,
+  ),
+
+  aquamarine: (
+    base: #7fffd4,
+  ),
+
+  ink: (
+    base: #212b35,
+  ),
+);
+
+@function color($hue, $value: base, $for-background: null) {
+  $fetched-color: map-get(map-get($color-palette-data, $hue), $value);
+
+  @if map-has-key($color-palette-data, $fetched-color) {
+    $fetched-color: map-get(map-get($color-palette-data, $fetched-color), $value);
+  }
+
+  @if $for-background != null {
+    $fetched-color: color-multiply($fetched-color, $for-background);
+  }
+
+  @if type-of($fetched-color) == color {
+    @return $fetched-color;
+  }
+}
+
+@function color-multiply($foreground, $background: null) {
+  @if $background == null {
+    $background: #ffffff;
+  }
+  @return $foreground * $background / 255;
+}
